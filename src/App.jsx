@@ -14,14 +14,14 @@ function App() {
   const navigate = useNavigate();
   const hasWarnedRef = useRef(false);
 
-  // useEffect(() => {
-  //   const studentId = localStorage.getItem('studentId');
-  //   if (!studentId && !hasWarnedRef.current) {
-  //     hasWarnedRef.current = true;
-  //     message.warning('请先登录');
-  //     navigate('/login', { replace: true });
-  //   }
-  // }, []);
+  useEffect(() => {
+    const studentId = localStorage.getItem('studentId');
+    if (!studentId && !hasWarnedRef.current) {
+      hasWarnedRef.current = true;
+      message.warning('请先登录');
+      navigate('/login', { replace: true });
+    }
+  }, []);
 
   return (
     <>
