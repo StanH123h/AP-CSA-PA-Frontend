@@ -1,0 +1,76 @@
+.selection-page {
+  height: 100%;
+  width: 100%;
+  .react-responsive-3d-carousel{
+    overflow: visible;
+  }
+  .react-responsive-3d-carousel__item{
+    border-radius: 20px;
+    overflow: visible;
+    .ant-card{
+      margin: 0;
+      padding: 0;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      .ant-card-cover{
+        width: 100%;
+        margin: 0;
+        z-index: 999;
+        position: relative;
+        border-radius: 20px 20px 0 0;
+        overflow: hidden;
+        .img-coach {
+          max-height: 300px;
+          width: 100%;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+      .ant-card-body{
+        z-index: -999;
+        padding: 0 !important;
+        .ant-card-meta{
+          box-sizing: border-box;
+          border-radius: 0 0 20px 20px;
+          padding: 20px;
+          margin: 0 !important;
+          .ant-card-meta-description{
+            max-height: 100px;
+            overflow: scroll;
+          }
+        }
+      }
+    }
+    .ant-card.selected{
+      .ant-card-meta{
+        background-color: rgba(0, 128, 0, 0.2);
+      }
+    }
+    .ant-card.un-selected{
+      .ant-card-meta{
+        background-color: rgba(128, 128, 128, 0.3);
+      }
+    }
+  }
+  .tour{
+    position: absolute;
+    right: 40px;
+    top: 24px;
+  }
+  button:focus{
+    outline:0;
+  }
+
+  .btn-next-page{
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+  }
+  .coach-info-card{
+    .name-and-mbti{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
